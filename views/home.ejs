@@ -1,0 +1,15 @@
+<%- include("partials/header") -%>
+<h1>Home</h1>
+<p><%=homeContent%></p>
+<!-- for(let i=0;i<publishContent.length;i++){
+
+console.log(publishContent[i].contentTitle)
+
+ } -->
+<% publishContent.forEach(function(element){%>
+<h1><%=element.contentTitle %></h1>
+<p><%=element.contentBody.substring(0,100)+"..."%>
+  <a href="/posts/<%=element.contentTitle%>">Read More</a>
+</p>
+<%});%>
+<%- include("partials/footer") -%>
